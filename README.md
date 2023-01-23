@@ -1,11 +1,7 @@
 ## OpenGL-Pyramid-Tutorial
-Part 1: OpenGL Pyramid and other shapes and colored lights tutorial.
+OpenGL Pyramid and other shapes and colored lights tutorial.
 
-https://youtu.be/Mj1FuVFFHpQ
-
-Part 2: Rewriting 3D Pyramid code for OpenGL using glfw. Part 2 adds an Objects class to quickly create multiple objects. 
-
-https://youtu.be/dXRqGmP5V0Y
+https://www.youtube.com/watch?v=1uMxZqNEx3I
 
 ![12](https://user-images.githubusercontent.com/110789514/214052702-d85aea51-a0e7-4eae-a535-52adf91e6e81.png)
 
@@ -15,7 +11,7 @@ Adams, Aaron. (2023). Untitled [Recorded by Aaron Adams].
 
 Adams, Shera (2022). Space Hieroglyphics Image.
 
-Damkier, Michael. (n.d.). Nebula in outer space, planets and galaxy. https://stock.adobe.com/Library/urn:aaid:sc:US:69be3180-f34c-4959-9e5a-1a493c726ecf?asset_id=502119125
+Damkier, Michael. (n.d.). Nebula in outer space, planets and galaxy. https://stock.adobe.com/images/nebula-in-outer-space-planets-and-galaxy/502119125
 
 Davis, Timothy. (2023). Untitled [Recorded by Timothy Davis].
 
@@ -29,5 +25,5 @@ TenWit. (n.d.). Ancient Egyptian hieroglyphics carved on a stone wall. https://a
 
 XtravaganT. (n.d.). Space nebula and galaxy. https://as1.ftcdn.net/v2/jpg/05/29/87/36/1000_F_529873693_V74iNOFH3z0LxitPFigGfuaU3lDxVl5P.jpg
 
-Ковалёв, Александр (n.d.). Beautiful space background. Space wallpaper. https://stock.adobe.com/Library/urn:aaid:sc:US:69be3180-f34c-4959-9e5a-1a493c726ecf?asset_id=224650894
+Ковалёв, Александр (n.d.). Beautiful space background. Space wallpaper. https://stock.adobe.com/images/beautiful-space-background-space-wallpaper/224650894
 
