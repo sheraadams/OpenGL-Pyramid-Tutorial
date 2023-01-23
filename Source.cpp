@@ -10,7 +10,7 @@
 #include <iostream>
 #include "Objects.h"
 
-//functions
+//functions 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
@@ -195,7 +195,8 @@ int main()
         glm::vec3(0.0f,  -1.0f, -2.0f)
 
     };
-  
+
+    // lightcube  vao vbo
     unsigned int VBO, lightCubeVAO;
     glGenVertexArrays(1, &lightCubeVAO);
     glGenBuffers(1, &VBO);
@@ -207,11 +208,14 @@ int main()
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
 
-
+    // textures
     unsigned int diffuseMap = loadTexture("resources/textures/1.jpg");
     unsigned int specularMap = loadTexture("resources/textures/1.jpg");
     unsigned int pyramidTexture = loadTexture("resources/textures/1.jpg");
+    unsigned int cubeTexture = loadTexture("resources/textures/3.png");
     unsigned int rectangleTexture = loadTexture("resources/textures/background5.jpg");
+
+    // initialize shader
     lightingShader.use();
     lightingShader.setInt("material.diffuse", 0);
     lightingShader.setInt("material.specular", 1);
@@ -249,6 +253,8 @@ int main()
         lightingShader.setVec3("viewPos", camera.Position);
         lightingShader.setFloat("material.shininess", 32.0f);
 
+
+        // settings for lighting
         // directional light
         lightingShader.setVec3("dirLight.direction", -0.2f, -1.0f, -0.3f);
         lightingShader.setVec3("dirLight.ambient", 0.05f, 0.05f, 0.05f);
@@ -308,16 +314,11 @@ int main()
         glm::mat4 model = glm::mat4(1.0f);
         lightingShader.setMat4("model", model);
 
-        // bind diffuse map
-        glActiveTexture(GL_TEXTURE0);
-        glBindTexture(GL_TEXTURE_2D, diffuseMap);
-        // bind specular map
-        glActiveTexture(GL_TEXTURE1);
-        glBindTexture(GL_TEXTURE_2D, specularMap);
-        // bind specular map
+
         glActiveTexture(GL_TEXTURE2);
         glBindTexture(GL_TEXTURE_2D, pyramidTexture);
 
+        // create object, link vao vbos
         Objects pyramid;
 
         pyramid.link(sizeof(pyramidVertices), pyramidVertices);
@@ -330,6 +331,8 @@ int main()
             model = glm::rotate(model, glm::radians(angle), glm::vec3(0.01f, 0.01f, 0.01f));
             model = glm::translate(model, pyramidPositions[i]);
             lightingShader.setMat4("model", model);
+            glActiveTexture(GL_TEXTURE0);
+            glBindTexture(GL_TEXTURE_2D, pyramidTexture);
             pyramid.bind();
             glDrawArrays(GL_TRIANGLES, 0, 36);
 
@@ -346,6 +349,8 @@ int main()
             model = glm::rotate(model, glm::radians(angle), glm::vec3(0.01f, 0.01f, 0.01f));
             model = glm::translate(model, newPositions[i]);
             lightingShader.setMat4("model", model);
+            glActiveTexture(GL_TEXTURE0);
+            glBindTexture(GL_TEXTURE_2D, cubeTexture);
             cube.bind();
             glDrawArrays(GL_TRIANGLES, 0, 36);
 
@@ -370,10 +375,11 @@ int main()
 
         }
 
-        // now lights
+        // now lights 
         glBindVertexArray(lightCubeVAO);
         for (unsigned int i = 0; i < 10; i++)
         {
+            // green lights
             if ((i == 2) || (i == 4) || (i == 6) || (i == 8))
             {
                 greenShader.use();
@@ -387,6 +393,7 @@ int main()
                 glDrawArrays(GL_TRIANGLES, 0, 36);
             }
             else
+            // pink lights
             {
                 // also draw the lamp object(s)
                 lightCubeShader.use();
@@ -407,8 +414,6 @@ int main()
     // ------------------------------------------------------------------------
     glDeleteVertexArrays(1, &lightCubeVAO);
     glDeleteBuffers(1, &VBO);
-
-
 
     glfwTerminate();
     return 0;
