@@ -7,10 +7,6 @@ https://www.youtube.com/watch?v=1uMxZqNEx3I
 
 ![1](https://user-images.githubusercontent.com/110789514/214070033-6165c1f5-3154-422c-a88b-5013dbc75be8.png)
 
-Adams, Aaron. (2023). Untitled [Recorded by Aaron Adams].
-
-Adams, Shera (2022). Space Hieroglyphics Image.
-
 Damkier, Michael. (n.d.). Nebula in outer space, planets and galaxy. https://stock.adobe.com/images/nebula-in-outer-space-planets-and-galaxy/502119125
 
 Davis, Timothy. (2023). Untitled [Recorded by Timothy Davis].
