@@ -1,5 +1,6 @@
 ## OpenGL-Pyramid-Tutorial
-OpenGL Pyramid and other shapes and colored lights tutorial.
+
+OpenGL Pyramid and other shapes and colored lights tutorial for educational use. 
 
 https://www.youtube.com/watch?v=1uMxZqNEx3I
 
@@ -23,3 +24,12 @@ XtravaganT. (n.d.). Space nebula and galaxy. https://as1.ftcdn.net/v2/jpg/05/29/
 
 Ковалёв, Александр (n.d.). Beautiful space background. Space wallpaper. https://stock.adobe.com/images/beautiful-space-background-space-wallpaper/224650894
 
+## License:
+
+The code is based on various tutorial code from LearnOpenGL.com.
+
+Tutorial code is © Joey DeVries and licensed under the CC BY 4.0 License.
+
+Modifications and additional contributions are © Shera Adams and licensed under the Apache 2.0 License.
+
+Proudly crafted with ❤️ by Shera Adams.
